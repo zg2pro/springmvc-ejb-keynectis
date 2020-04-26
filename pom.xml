@@ -8,7 +8,7 @@
     <name>base-ejb-war</name>
 
     <modules>
-<module>base-ejb-war-ear</module>
+        <module>base-ejb-war-ear</module>
         <module>base-ejb-war-ejb</module>
         <module>base-ejb-war-web</module>
     </modules>
