@@ -6,8 +6,9 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>base-ejb-war</name>
+
     <modules>
-        <module>base-ejb-war-ear</module>
+<module>base-ejb-war-ear</module>
         <module>base-ejb-war-ejb</module>
         <module>base-ejb-war-web</module>
     </modules>
@@ -17,7 +18,6 @@
                 <groupId>com.github.zg2pro.formatter</groupId>
                 <artifactId>zg2pro-formatter-plugin</artifactId>
                 <version>0.1-SNAPSHOT</version>
-
                 <executions>
                     <execution>
                         <goals>
