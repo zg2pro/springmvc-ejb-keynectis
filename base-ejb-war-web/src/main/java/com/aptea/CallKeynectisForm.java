@@ -4,25 +4,19 @@ package com.aptea;
  * @author gregory.anne
  */
 public class CallKeynectisForm {
-
     private String message;
 
     public CallKeynectisForm(String message) {
-	this.message = message;
+        this.message = message;
     }
 
-    public CallKeynectisForm() {
-    }
+    public CallKeynectisForm() {}
 
     public String getMessage() {
-	return message;
+        return message;
     }
 
     public void setMessage(String message) {
-	this.message = message;
+        this.message = message;
     }
-
-
-
-
 }

@@ -16,28 +16,39 @@ import org.springframework.web.servlet.mvc.AbstractController;
 @Controller
 @SessionAttributes
 public class CallKeynectisController extends AbstractController {
-
     @EJB(mappedName = "com.aptea.ICallKeynectisServiceRemote")
     private ICallKeynectisServiceRemote callKeynectis;
 
     private ICallKeynectisServiceRemote sigisizeBeans() {
-	try {
-	    return (ICallKeynectisServiceRemote) new InitialContext().lookup("com.aptea.ICallKeynectisServiceRemote");
-	} catch (NamingException ex) {
-	    return null;
-	}
+        try {
+            return (ICallKeynectisServiceRemote) new InitialContext()
+            .lookup("com.aptea.ICallKeynectisServiceRemote");
+        } catch (NamingException ex) {
+            return null;
+        }
     }
 
     @Override
-    protected ModelAndView handleRequestInternal(HttpServletRequest hsr, HttpServletResponse hsr1) {
-	if (callKeynectis == null){
-	    callKeynectis = sigisizeBeans();
-	}
-	try {
-	    callKeynectis.digitalSignature();
-	    return new ModelAndView("index", "command", new CallKeynectisForm("success"));
-	} catch(Exception exc){
-	    return new ModelAndView("index", "command", new CallKeynectisForm(exc.getMessage()));
-	}
+    protected ModelAndView handleRequestInternal(
+        HttpServletRequest hsr,
+        HttpServletResponse hsr1
+    ) {
+        if (callKeynectis == null) {
+            callKeynectis = sigisizeBeans();
+        }
+        try {
+            callKeynectis.digitalSignature();
+            return new ModelAndView(
+                "index",
+                "command",
+                new CallKeynectisForm("success")
+            );
+        } catch (Exception exc) {
+            return new ModelAndView(
+                "index",
+                "command",
+                new CallKeynectisForm(exc.getMessage())
+            );
+        }
     }
 }
