@@ -61,10 +61,10 @@ public enum Settings {
 	// Session : 10 heures par défaut
 	SIGIS_SESSION_MAX_AGE_SECONDS("web.session.max.age.seconds", "36000"),
 	ANTISPAMLATENCY("fo.spam.temps.min.before.submit", "10000");
-	
+
 	final static Pattern extractCustomLevel = Pattern.compile("log.level.(.*)");
 	final static Pattern extractCustomAppender = Pattern.compile("log.appender.(.*)");
-	
+
 	public static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat();
 
 	static {
@@ -106,7 +106,7 @@ public enum Settings {
 		return Boolean.parseBoolean(getSetting());
 	}
 
-	
+
 
 	private static void showErrorMessage() {
 		StringBuilder message = new StringBuilder("La variable d'environnement SIGIS_SETTINGS_FILE doit référencer un fichier contenant les paramètres suivants (les valeurs par défaut sont indiquées ici) : ");
@@ -142,7 +142,7 @@ public enum Settings {
 	private static Map<String, Level> customLevels = new HashMap<String, Level>();
 	private static Map<String, String> customAppenders = new HashMap<String, String>();
 */
-	
+
 
 	public static String getCurrentSigisRevision() {
 		try {
