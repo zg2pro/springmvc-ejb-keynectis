@@ -1,5 +1,5 @@
 <test>
-<again>
-a value
-</again>
+    <again>
+		a value
+    </again>
 </test>
