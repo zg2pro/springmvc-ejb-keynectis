@@ -18,7 +18,7 @@
             <plugin>
                 <groupId>com.github.zg2pro.formatter</groupId>
                 <artifactId>zg2pro-formatter-plugin</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>0.1</version>
                 <executions>
                     <execution>
                         <goals>
